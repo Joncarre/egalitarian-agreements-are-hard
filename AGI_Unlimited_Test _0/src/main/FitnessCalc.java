@@ -102,17 +102,13 @@ public class FitnessCalc {
     	double[] assignments = new double[numUsers];
         // Loop through our individuals genes
         for (int i = 0; i < Individual.defaultGeneLength; i++) {
-        	 for(int j = 0; j < numUsers; j++) {
-        		 if(individual.getGene(i) == 0) {
-        			 assignments[j] += -1 * M_preferences.get(j).get(i);
-        		 }else {
-            		 assignments[j] += 1 * M_preferences.get(j).get(i); 
-        		 }
-        	 }
+        	 for(int j = 0; j < numUsers; j++)
+        		 assignments[j] += individual.getGene(i) * M_preferences.get(j).get(i); 
         }
         return getMinValue(assignments); 
-    }
-    
+	}
+
+	
     /**
      * Return of minimum value
      * @param vector

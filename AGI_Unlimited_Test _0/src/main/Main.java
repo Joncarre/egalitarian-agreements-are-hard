@@ -45,9 +45,13 @@ public class Main {
     	System.out.println("Armor: " + a);
     	System.out.println("Potion: " + p);
     	*/
-    	
-		try {
-			Engine engine = new Engine();
+    			try {
+			// Opción 1: Con monitoreo completo (por defecto)
+			//Engine engine = new Engine();
+			
+			// Opción 2: Sin monitoreo (para ejecución silenciosa)
+			Engine engine = new Engine(false);
+			
 			engine.start();
 		} catch (IOException e) {
 			System.out.println("Error - Main: " + e.getMessage());

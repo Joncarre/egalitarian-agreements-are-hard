@@ -3,15 +3,32 @@ package main;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Engine {
-	private final int avgIterations = 20; // Average Iterations
-	private final int generations = 2000; // Evolutions of population
-	private final int popSize = 20; // Population Size
+public class Engine {	private final int avgIterations = 20; // Average Iterations
+	private final int generations = 3000; // Aumentado drásticamente para mejor convergencia
+	private final int popSize = 90; // Aumentado hasta casi el límite máximo (99)
 	private final int numUsers = 8; // Number of agents
 	private int pfcIterations = 20; // Preference Iterations
 	private FitnessCalc fitness = new FitnessCalc(this.numUsers);
 	private Population myPop;
 	Scanner sc = new Scanner(System.in);
+	// Monitor para seguimiento de la evolución (opcional)
+	private AlgorithmMonitor monitor;
+	
+	/**
+	 * Constructor - inicializa el monitor
+	 */
+	public Engine() {
+		// Crear monitor habilitado por defecto
+		// Para deshabilitar: cambiar 'true' por 'false'
+		this.monitor = new AlgorithmMonitor(true, 500, 100);
+	}
+	
+	/**
+	 * Constructor con opción de monitoreo personalizado
+	 */
+	public Engine(boolean enableMonitoring) {
+		this.monitor = new AlgorithmMonitor(enableMonitoring, 500, 100);
+	}
 	
 	/**
 	 * This method controls the flow of execution
@@ -87,16 +104,31 @@ public class Engine {
 		for(int i = 0; i < pfcIterations && seguir == true; i++) { // Loop to increment or decrement preferences	
 			this.fitness.resetValues(avgIterations);
 			this.fitness.resetPopulations(popSize);
-			this.fitness.saveTemporalPreferences();
-
-			for(int j = 0; j < avgIterations; j++) { // Loop to select our best egalitarian result
+			this.fitness.saveTemporalPreferences();			for(int j = 0; j < avgIterations; j++) { // Loop to select our best egalitarian result
+		    	monitor.showRunStart(j+1, avgIterations);
 		    	this.myPop = new Population(this.popSize, this.numUsers, false);
 		    	int generationCount = 0;
+		    	
+		    	// Show initial population
+		    	monitor.monitorEvolution(this.myPop, 0, Algorithm.getCurrentMutationRate(), 
+		    	                        Algorithm.getBestFitnessEver(), Algorithm.getNoImprovementCounter(), 
+		    	                        Algorithm.getExplorePhase());
+		    	
 				while (generationCount < this.generations) {
 			        generationCount++;
 					//System.out.println("Iteration: " + generationCount + " Fitness(lowest): " + myPop.getIndividual(0).getOnlyFitness()  + " Genes: " + myPop.getIndividual(0).toString());
 			        this.myPop = Algorithm.evolvePopulation(this.myPop, this.popSize, generationCount);
+			        
+			        // Monitor evolution progress
+			        monitor.monitorEvolution(this.myPop, generationCount, Algorithm.getCurrentMutationRate(), 
+			                               Algorithm.getBestFitnessEver(), Algorithm.getNoImprovementCounter(), 
+			                               Algorithm.getExplorePhase());
 				}
+				
+				// Show final results for this run
+				Individual best = this.myPop.getFittest();
+				monitor.showRunEnd(j+1, best);
+				
 				this.fitness.saveIndividuals(myPop.getIndividual(0));
 			}
 			this.fitness.updateBestFitness();
@@ -160,6 +192,13 @@ public class Engine {
 		this.fitness.randomPreferences();
 		this.fitness.writePreferences();
 		System.out.println("Data generated");
+	}
+	
+	/**
+	 * Permite acceso al monitor para configuración personalizada
+	 */
+	public AlgorithmMonitor getMonitor() {
+		return this.monitor;
 	}
 }
 
