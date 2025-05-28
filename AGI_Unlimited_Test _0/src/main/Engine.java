@@ -3,8 +3,8 @@ package main;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Engine {	private final int avgIterations = 20; // Average Iterations
-	private final int generations = 3000; // Aumentado drásticamente para mejor convergencia
+public class Engine {	private final int avgIterations = 10; // Average Iterations
+	private final int generations = 50000; // Aumentado drásticamente para mejor convergencia
 	private final int popSize = 90; // Aumentado hasta casi el límite máximo (99)
 	private final int numUsers = 8; // Number of agents
 	private int pfcIterations = 20; // Preference Iterations

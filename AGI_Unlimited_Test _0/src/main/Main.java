@@ -46,10 +46,14 @@ public class Main {
     	System.out.println("Potion: " + p);
     	*/
     			try {
-			// Opción 1: Con monitoreo completo (por defecto)
+			// ----- Opción 1: Con monitoreo completo (por defecto) -----
 			//Engine engine = new Engine();
 			
-			// Opción 2: Sin monitoreo (para ejecución silenciosa)
+			// ----- Opción 2: Monitoreo personalizado -----
+			//Engine engine = new Engine(true);
+			//engine.getMonitor().setIntervals(1000, 500); // Detallado cada 1000, rápido cada 250
+
+			// ----- Opción 3: Sin monitoreo (para ejecución silenciosa) -----
 			Engine engine = new Engine(false);
 			
 			engine.start();
