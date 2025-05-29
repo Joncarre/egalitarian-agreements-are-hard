@@ -11,7 +11,7 @@ public interface ICustomReadFile {
 	 * @throws IOException */
 	public abstract Vector<Double> readVector(Scanner in) throws IOException;
 	/** Lee un double de fichero de lectura */
-	public abstract int readDouble(Scanner in);
+	public abstract Double readDouble(Scanner in);
 	/** Lee un array del fichero de lectura */
 	public abstract int[] readArray(Scanner in, int sizeArray);
 	/** Lee un int de fichero de lectura */

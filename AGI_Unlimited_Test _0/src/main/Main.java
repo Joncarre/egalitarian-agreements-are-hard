@@ -51,7 +51,7 @@ public class Main {
 			
 			// ----- Opción 2: Monitoreo personalizado -----
 			//Engine engine = new Engine(true);
-			//engine.getMonitor().setIntervals(1000, 500); // Detallado cada 1000, rápido cada 250
+			//engine.getMonitor().setIntervals(3000, 1000); // Detallado cada 1000, rápido cada 250
 
 			// ----- Opción 3: Sin monitoreo (para ejecución silenciosa) -----
 			Engine engine = new Engine(false);

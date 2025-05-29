@@ -153,21 +153,17 @@ public class AlgorithmMonitor {
     }
     
     /**
-     * Crea una vista previa de los genes de un individuo
+     * Obtiene la representación completa de los genes de un individuo
      */
     private String getGenesPreview(Individual individual) {
-        StringBuilder preview = new StringBuilder();
-        int previewLength = Math.min(20, individual.size());
+        StringBuilder genes = new StringBuilder();
         
-        for (int i = 0; i < previewLength; i++) {
-            preview.append(individual.getGene(i));
+        // Mostrar todos los genes
+        for (int i = 0; i < individual.size(); i++) {
+            genes.append(individual.getGene(i));
         }
         
-        if (individual.size() > previewLength) {
-            preview.append("... (").append(individual.size()).append(" total)");
-        }
-        
-        return preview.toString();
+        return genes.toString();
     }
     
     /**

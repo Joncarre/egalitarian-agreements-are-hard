@@ -66,6 +66,30 @@ public class Algorithm {
         		}
         	}
         }
+
+        // ------------------------------- mostrar individuos ---------------------------------
+        // Mostrar los 3 mejores individuos (o menos si la población es menor)
+        /* 
+        System.out.println("\n----- Top Individuos 1ra -----");
+        int topCount = Math.min(3, popSize);
+        for (int i = 0; i < topCount; i++) {
+            Individual ind = popEvolved.getIndividual(i);
+            System.out.println("Individuo #" + (i + 1) + " - Fitness: " + ind.getOnlyFitness() + " - Número de genes: " + ind.size());
+            System.out.print("Genes: ");
+            for (int j = 0; j < ind.size(); j++) {
+            System.out.print(ind.getGene(j) + " ");
+            // Opcional: añadir salto de línea cada 20 genes para mejor legibilidad
+            if ((j + 1) % 20 == 0) {
+            System.out.print("\n       ");
+            }
+            }
+            System.out.println("\n");
+            if(ind.size() < 40)
+            System.out.println("Genes INCOMPLETOS");
+        }
+        System.out.println("-------------------------");
+        */
+
         
         // Sistema avanzado de detección y ruptura de estancamiento
         boolean inCatastropheMode = false;
@@ -170,6 +194,30 @@ public class Algorithm {
             Individual newIndiv = crossover(indiv1, indiv2);
             newPop.saveIndividual(i, newIndiv);
         }
+
+
+        // ------------------------------- mostrar individuos ---------------------------------
+        // Mostrar los 3 mejores individuos (o menos si la población es menor)
+        /* System.out.println("\n----- Top Individuos 2da -----");
+        int topCount2 = Math.min(3, popSize);
+        for (int i = 0; i < topCount2; i++) {
+            Individual ind = popEvolved.getIndividual(i);
+            System.out.println("Individuo #" + (i + 1) + " - Fitness: " + ind.getOnlyFitness() + " - Número de genes: " + ind.size());
+            System.out.print("Genes: ");
+            for (int j = 0; j < ind.size(); j++) {
+            System.out.print(ind.getGene(j) + " ");
+            // Opcional: añadir salto de línea cada 20 genes para mejor legibilidad
+            if ((j + 1) % 20 == 0) {
+            System.out.print("\n       ");
+            }
+            }
+            System.out.println("\n");
+            if(ind.size() < 40)
+            System.out.println("Genes INCOMPLETOS"); 
+        }
+        System.out.println("-------------------------"); */
+
+
    
          // Aplicar mutación a la población con esquema de recocido simulado
         for (int i = elitismOffset; i < newPop.size(); i++) {
@@ -215,6 +263,30 @@ public class Algorithm {
                 }
             }
         }
+
+        // ------------------------------- mostrar individuos ---------------------------------
+        // Mostrar los 3 mejores individuos (o menos si la población es menor)
+        /* 
+        System.out.println("\n----- Top Individuos 3ra -----");
+        int topCount3 = Math.min(3, popSize);
+        for (int i = 0; i < topCount3; i++) {
+            Individual ind = popEvolved.getIndividual(i);
+            System.out.println("Individuo #" + (i + 1) + " - Fitness: " + ind.getOnlyFitness() + " - Número de genes: " + ind.size());
+            System.out.print("Genes: ");
+            for (int j = 0; j < ind.size(); j++) {
+            System.out.print(ind.getGene(j) + " ");
+            // Opcional: añadir salto de línea cada 20 genes para mejor legibilidad
+            if ((j + 1) % 20 == 0) {
+            System.out.print("\n       ");
+            }
+            }
+            System.out.println("\n");
+            if(ind.size() < 40)
+            System.out.println("Genes INCOMPLETOS");
+        }
+        System.out.println("-------------------------");
+        */
+
 
         // Bubble Sort
     	Individual temp2 = new Individual();

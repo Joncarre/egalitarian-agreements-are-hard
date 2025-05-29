@@ -17,10 +17,10 @@ public class CustomReadFile extends FileReader implements ICustomReadFile {
 	}
 	
 	@Override
-	public int readDouble(Scanner in) {
+	public Double readDouble(Scanner in) {
 		in.useDelimiter(" ");
 		String elemString = in.next();
-		return Integer.parseInt(elemString);
+		return Double.parseDouble(elemString);
 	}
 	
 	@Override
