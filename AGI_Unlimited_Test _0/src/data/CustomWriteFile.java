@@ -4,13 +4,13 @@ import java.io.IOException;
 
 
 public class CustomWriteFile extends FileWriter implements ICustomWriteFile{
-		/**
+	/**
 	 * Constructora que recibe nombre de fichero
 	 * @param name
 	 * @throws IOException 
 	 */
 	public CustomWriteFile(String name) throws IOException {
-		super(new java.io.File( "." ).getCanonicalPath() + "/AGI_Unlimited_Test _0/src/data/file/" + name);
+		super(new java.io.File( "." ).getCanonicalPath() + "/src/data/file/" + name);
 	}
 	
 	@Override

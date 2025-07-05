@@ -6,13 +6,13 @@ import java.util.Vector;
 
 public class CustomReadFile extends FileReader implements ICustomReadFile {
 	private double endLine;
-		/**
+	/**
 	 * Constructora que recibe nombre de fichero
 	 * @param name
 	 * @throws IOException 
 	 */
 	public CustomReadFile(String name) throws IOException {
-		super(new java.io.File( "." ).getCanonicalPath() + "/AGI_Unlimited_Test _0/src/data/file/" + name);
+		super(new java.io.File( "." ).getCanonicalPath() + "/src/data/file/" + name);
 		this.endLine = -1000;
 	}
 	
