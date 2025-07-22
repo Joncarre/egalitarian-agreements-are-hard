@@ -1,9 +1,16 @@
-# Egalitarian Agreements are (Computationally) Hard
+## Egalitarian Agreements are (Computationally) Hard
+---
 
-This repository contains the resources that complement the article `Egalitarian Agreements are (Computationally) Hard`. Here you can download in PDF format the preferences of the ten agents used in the Unlimited and Limited scenarios. Note that the preferences of Agent 0 are marked in green or red depending on whether they are positive or negative. This Agent 0 is the so-called “Lying political party”. In other words; it is the political party that tries to carry out strategic behaviors.
+# Where did the information come from?
+
+The data presented here corresponds to 25 proposals presented to the Spanish population during 2024. For each of the proposals, a correspondence is made between the response and its political inclination, so that we are able to obtain the degree of agreement (or disagreement) for each of the proposals based on people's political inclinations. For more information, please consult the official website of the Spanish Ministry: https://www.cis.es
+
+# What programs does this repository contain?
+
+This repository also contains resources that complement the article `Egalitarian Agreements are (Computationally) Hard`. Here you can download in PDF format the preferences of the eight agents (political parties) used in the unlimited and limited scenarios. These preferences represent the intention to approve or reject a given proposal based on political inclination. Please note that the preferences of agent 0 (Vox political party) are marked in green or red, depending on whether they are positive or negative. This agent 0 is the so-called “lying political party.” In other words, it is the political party that attempts to engage in strategic behavior.
 
 > [!NOTE]
-> To carry out all the tests, numerous modifications of the algorithms were necessary. As an example, it has been decided to show the configuration of the Limited scenario. If you are interested in knowing the configuration for any of the specific tests or the parameters used in the tests, please send an e-mail to `joncarre@ucm.es`.
+> In order to run all the tests, numerous modifications to the algorithms were necessary. As an example, we have decided to show the Limited and Unlimited scenario configurations in Test 0, as well as the ULGA algorithm. If you are interested in learning about the configuration of any of the specific tests or the parameters used in the tests, please send an email to `joncarre@ucm.es`.
 
 
 > [!TIP]
