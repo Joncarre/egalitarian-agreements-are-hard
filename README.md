@@ -1,6 +1,6 @@
-# To lie or not to lie... in negotiations under egalitarian social welfare
+# Egalitarian Agreements are (Computationally) Hard
 
-This repository contains the resources that complement the article `To lie or not to lie... in negotiations under egalitarian social welfare`. Here you can download in PDF format the preferences of the ten agents used in the Unlimited and Limited scenarios. Note that the preferences of Agent 0 are marked in green or red depending on whether they are positive or negative. This Agent 0 is the so-called “Lying political party”. In other words; it is the political party that tries to carry out strategic behaviors.
+This repository contains the resources that complement the article `Egalitarian Agreements are (Computationally) Hard`. Here you can download in PDF format the preferences of the ten agents used in the Unlimited and Limited scenarios. Note that the preferences of Agent 0 are marked in green or red depending on whether they are positive or negative. This Agent 0 is the so-called “Lying political party”. In other words; it is the political party that tries to carry out strategic behaviors.
 
 > [!NOTE]
 > To carry out all the tests, numerous modifications of the algorithms were necessary. As an example, it has been decided to show the configuration of the Limited scenario. If you are interested in knowing the configuration for any of the specific tests or the parameters used in the tests, please send an e-mail to `joncarre@ucm.es`.
