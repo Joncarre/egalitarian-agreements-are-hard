@@ -1,4 +1,4 @@
-# Egalitarian Agreements are (Computationally) Hard
+# Egalitarian Agreements are (computationally) Hard
 
 ## Where did the information come from?
 
