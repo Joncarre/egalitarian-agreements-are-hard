@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "name": "Unlimited Java Project",
+            "path": ".."
+        }
+    ],
+    "settings": {
+        "java.project.sourcePaths": ["src"],
+        "java.project.outputPath": "bin",
+        "java.compile.nullAnalysis.mode": "disabled",
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.project.referencedLibraries": [],
+        "files.exclude": {
+            "**/.classpath": true,
+            "**/.project": true,
+            "**/.settings": true,
+            "**/.factorypath": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "vscjava.vscode-java-pack"
+        ]
+    }
+}

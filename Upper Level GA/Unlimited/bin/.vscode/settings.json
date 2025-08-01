@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": ["."],
+    "java.project.outputPath": "../bin",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.referencedLibraries": [],
+    "java.project.resourceFilters": [
+        "node_modules",
+        "\\.git"
+    ]
+}
